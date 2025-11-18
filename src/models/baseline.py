@@ -27,7 +27,7 @@ class StratifiedBaselineModel(BaseModel):
         self.random_seed = config.RANDOM_SEED
 
     def fit(self, X_train: pd.DataFrame, y_train: pd.Series) -> None:
-        class_priors = y_train.value_counts(normalize='True')
+        class_priors = y_train.value_counts(normalize=True)
         for y_class in y_train.unique():
             self.probs[y_class] = class_priors[y_class]
 
