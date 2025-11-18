@@ -22,7 +22,7 @@ def train_baseline(wine_type: str, model: BaseModel) -> Dict[str, Any]:
     results = evaluate_model(y_test, preds, wine_type, model.get_name())
     print_evaluation(results)
 
-    tracker = ExperimentTracker()
+    tracker = ExperimentTracker(model.get_name(), wine_type)
     tracker.log_experiment(results)
 
     return results
