@@ -19,8 +19,7 @@ def evaluate_model(y_true: pd.Series, y_pred: pd.Series, wine_type: str, model_n
         'accuracy': accuracy_score(y_true, y_pred),
         'precision': precision_score(y_true, y_pred, average='weighted', zero_division=0),
         'recall': recall_score(y_true, y_pred, average='weighted', zero_division=0),
-        'f1': f1_score(y_true, y_pred, average='weighted', zero_division=0),
-        'confusion_matrix': confusion_matrix(y_true, y_pred)
+        'f1': f1_score(y_true, y_pred, average='weighted', zero_division=0)
     }
     return results
 
