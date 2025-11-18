@@ -5,8 +5,9 @@ Baseline models
 import pandas as pd
 import numpy as np
 import config
+from src.models.base_model import BaseModel
 
-class BaselineModel:
+class BaselineModel(BaseModel):
     # predicts the majority class only
     def fit(self, X_train: pd.DataFrame, y_train: pd.Series) -> None:
         modes = y_train.mode()
@@ -19,7 +20,7 @@ class BaselineModel:
     def get_name(self) -> str:
         return "Baseline Model"
     
-class StratifiedBaselineModel:
+class StratifiedBaselineModel(BaseModel):
     # predicts classes with the same probability as class priors
     def __init__(self):
         self.probs = {}
