@@ -75,7 +75,7 @@ class DataLoader:
         white_X_train, white_X_test, white_y_train, white_y_test = self.create_train_test_split(white_df)
 
         self.save_splits(red_X_train, red_X_test, red_y_train, red_y_test, 'red')
-        self.save_splits(white_X_train, white_X_train, white_y_train, white_y_test, 'white')
+        self.save_splits(white_X_train, white_X_test, white_y_train, white_y_test, 'white')
 
     def load_splits(self, wine_type: str) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
         X_train = pd.read_csv(f'{SPLITS_DIR}/{wine_type}_X_train.csv')

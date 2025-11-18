@@ -11,9 +11,9 @@ from src.models.baseline import BaselineModel, StratifiedBaselineModel
 
 def evaluate_baseline(y_test, preds) -> None:
     print(f"Accuracy: {accuracy_score(y_test, preds)}")
-    print(f"Precision: {precision_score(y_test, preds, average='weighted')}")
-    print(f"Recall: {recall_score(y_test, preds, average='weighted')}")
-    print(f"F1: {f1_score(y_test, preds, average='weighted')}")
+    print(f"Precision: {precision_score(y_test, preds, average='weighted', zero_division=0)}")
+    print(f"Recall: {recall_score(y_test, preds, average='weighted', zero_division=0)}")
+    print(f"F1: {f1_score(y_test, preds, average='weighted', zero_division=0)}")
 
 def train_baseline(wine_type: str, model: Union[BaselineModel, StratifiedBaselineModel]) -> None:
     print(f'TRAINING {model.get_name().upper()} for {wine_type} wines')
