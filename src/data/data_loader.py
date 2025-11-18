@@ -25,7 +25,7 @@ class DataLoader:
         else:
             raise ValueError(f"wine_type must be 'red' or 'white', got '{wine_type}'")
         
-        df = pd.read_csv(path)
+        df = pd.read_csv(path, sep=';')
         return df
     
     def add_quality_class(self, df: pd.DataFrame) -> pd.DataFrame:
