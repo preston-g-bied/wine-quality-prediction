@@ -28,6 +28,19 @@ QUALITY_BINS = {
 BIN_EDGES = [0, 6, 7, 11]  # 0-5, 6, 7-10
 BIN_LABELS = ['low', 'medium', 'high']
 
+# quality/numeric conversion
+QUALITY_LABELS = {
+    0: 'Low',
+    1: 'Medium', 
+    2: 'High'
+}
+
+QUALITY_TO_NUMERIC = {
+    'Low': 0,
+    'Medium': 1,
+    'High': 2
+}
+
 # train/test split configuration
 TEST_SIZE = 0.3
 
