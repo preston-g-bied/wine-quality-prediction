@@ -9,6 +9,9 @@ from src.models.base_model import BaseModel
 
 class BaselineModel(BaseModel):
     # predicts the majority class only
+    def __init__(self):
+        super().__init__()
+
     def fit(self, X_train: pd.DataFrame, y_train: pd.Series) -> None:
         modes = y_train.mode()
         self.majority_class = modes.iloc[0]
@@ -24,6 +27,7 @@ class BaselineModel(BaseModel):
 class StratifiedBaselineModel(BaseModel):
     # predicts classes with the same probability as class priors
     def __init__(self):
+        super().__init__()
         self.probs = {}
         self.random_seed = config.RANDOM_SEED
 

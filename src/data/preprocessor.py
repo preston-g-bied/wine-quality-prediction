@@ -91,6 +91,16 @@ class Preprocessor():
         y_train.to_csv(PROCESSED_DATA_DIR / f'{self.wine_type}_y_train.csv', index=False, header=True)
         y_test.to_csv(PROCESSED_DATA_DIR / f'{self.wine_type}_y_test.csv', index=False, header=True)
 
+    @staticmethod
+    def load_processed_data(wine_type: str) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series]:
+        X_train = pd.read_csv(PROCESSED_DATA_DIR / f'{wine_type}_X_train.csv')
+        X_test = pd.read_csv(PROCESSED_DATA_DIR / f'{wine_type}_X_test.csv')
+        y_train = pd.read_csv(PROCESSED_DATA_DIR / f'{wine_type}_y_train.csv').squeeze()
+        y_test = pd.read_csv(PROCESSED_DATA_DIR / f'{wine_type}_y_test.csv').squeeze()
+
+        return X_train, X_test, y_train, y_test
+
+
 class FeatureScaler():
     """StandardScaler wrapper"""
 
