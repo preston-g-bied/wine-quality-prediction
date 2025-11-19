@@ -34,7 +34,7 @@ class BaseModel(ABC):
             pickle.dump(self, f)
 
     @classmethod
-    def load_model(cls, filepath: Path):
+    def load_model(cls, filepath: Path) -> 'BaseModel':
         """Load model from disk"""
         with open(filepath, 'rb') as f:
             return pickle.load(f)
