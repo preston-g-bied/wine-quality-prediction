@@ -26,7 +26,7 @@ class Preprocessor():
         return self
     
     def transform(self, X: pd.DataFrame, y: Optional[pd.Series] = None,
-                  standardize: bool = True) -> Tuple[pd.Dataframe, Optional[pd.Series]]:
+                  standardize: bool = True) -> Tuple[pd.DataFrame, Optional[pd.Series]]:
         if not self.is_fitted:
             raise ValueError("Preprocessor must be fitted before transform. Call fit() first.")
         
@@ -124,3 +124,14 @@ class FeatureScaler():
         return pd.DataFrame(X_original, columns=self.feature_names, index=X_scaled.index)
     
 # could add ClassBalancer and PCA classes later
+
+def main():
+    wine_types = ['red', 'white']
+
+    for wine_type in wine_types:
+        print(f"Processing {wine_type} wine data")
+        preprocessor = Preprocessor(wine_type)
+        X_train, X_test, y_train, y_test = preprocessor.preprocess_and_save(standardize=True)
+
+if __name__ == "__main__":
+    main()

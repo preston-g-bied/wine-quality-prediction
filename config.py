@@ -30,15 +30,15 @@ BIN_LABELS = ['low', 'medium', 'high']
 
 # quality/numeric conversion
 QUALITY_LABELS = {
-    0: 'Low',
-    1: 'Medium', 
-    2: 'High'
+    0: 'low',
+    1: 'medium', 
+    2: 'high'
 }
 
 QUALITY_TO_NUMERIC = {
-    'Low': 0,
-    'Medium': 1,
-    'High': 2
+    'low': 0,
+    'medium': 1,
+    'high': 2
 }
 
 # train/test split configuration
