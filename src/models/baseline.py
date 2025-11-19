@@ -12,6 +12,7 @@ class BaselineModel(BaseModel):
     def fit(self, X_train: pd.DataFrame, y_train: pd.Series) -> None:
         modes = y_train.mode()
         self.majority_class = modes.iloc[0]
+        self.is_fitted = True
 
     def predict(self, X_test: pd.DataFrame) -> pd.Series:
         preds = [self.majority_class] * X_test.shape[0]
@@ -30,6 +31,7 @@ class StratifiedBaselineModel(BaseModel):
         class_priors = y_train.value_counts(normalize=True)
         for y_class in y_train.unique():
             self.probs[y_class] = class_priors[y_class]
+        self.is_fitted = True
 
     def predict(self, X_test: pd.DataFrame) -> pd.Series:
         np.random.seed(self.random_seed)
