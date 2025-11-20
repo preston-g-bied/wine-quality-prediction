@@ -7,7 +7,10 @@ sys.path.append('..')
 
 from src.data.preprocessor import Preprocessor
 from src.models.logistic_regression import LogisticRegressionModel
-from src.evaluation.metrics import evaluate_model, print_evaluation
+from src.evaluation.metrics import (
+     evaluate_model, print_evaluation,
+     print_confusion_matrix, print_per_class_metrics
+)
 from src.utils.experiment_tracker import ExperimentTracker
 from config import *
 
@@ -28,6 +31,10 @@ def train_logistic_regression(wine_type: str, C: float = 1.0):
 
     results = evaluate_model(y_test, predictions, wine_type, model.get_name())
     print_evaluation(results)
+
+    print_confusion_matrix(y_test, predictions)
+
+    print_per_class_metrics(y_test, predictions)
 
     tracker = ExperimentTracker(model.get_name(), wine_type)
     tracker.log_experiment({
