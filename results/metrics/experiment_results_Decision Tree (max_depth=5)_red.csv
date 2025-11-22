@@ -1,0 +1,2 @@
+model_name,wine_type,accuracy,precision,recall,f1,max_depth,min_samples_split,min_samples_leaf,criterion,random_state,timestamp
+Decision Tree (max_depth=5),red,0.625,0.6253452202355197,0.625,0.621741103848947,5,2,1,entropy,49,2025-11-22T13:37:01.341073
