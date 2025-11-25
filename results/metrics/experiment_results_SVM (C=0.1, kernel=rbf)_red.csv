@@ -1,0 +1,2 @@
+model_name,wine_type,accuracy,precision,recall,f1,C,kernel,gamma,random_state,timestamp
+"SVM (C=0.1, kernel=rbf)",red,0.6291666666666667,0.5402227000053087,0.6291666666666667,0.5807555683563748,0.1,rbf,scale,49,2025-11-24T23:07:24.168262
