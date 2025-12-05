@@ -1,0 +1,2 @@
+model_name,wine_type,accuracy,precision,recall,f1,n_estimators,learning_rate,base_estimator_max_depth,random_state,timestamp
+"AdaBoost (n_estimators=50, lr=1.0)",white,0.5380952380952381,0.5367846815124587,0.5380952380952381,0.5329272276999498,50,1.0,1,49,2025-12-04T19:23:05.905094

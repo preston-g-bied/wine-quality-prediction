@@ -1,0 +1,2 @@
+model_name,wine_type,accuracy,precision,recall,f1,n_estimators,max_depth,min_samples_split,min_samples_leaf,criterion,random_state,timestamp
+"Random Forest (n_estimators=100, max_depth=20)",red,0.7583333333333333,0.7622308755823141,0.7583333333333333,0.7566039080691955,100,20,2,1,gini,49,2025-12-04T19:22:05.144829
