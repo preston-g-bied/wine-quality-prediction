@@ -1,0 +1,2 @@
+model_name,wine_type,accuracy,precision,recall,f1,n_neighbors,weights,metric,p,timestamp
+"KNN (k=3, weights=uniform)",white,0.6,0.5999677105096626,0.6,0.5995201964782755,3,uniform,minkowski,2,2025-12-04T19:08:11.242914

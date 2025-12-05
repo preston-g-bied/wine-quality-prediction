@@ -1,0 +1,2 @@
+model_name,wine_type,accuracy,precision,recall,f1,n_neighbors,weights,metric,p,timestamp
+"KNN (k=11, weights=distance)",red,0.6979166666666666,0.7070399844478228,0.6979166666666666,0.6999916510186031,11,distance,minkowski,2,2025-12-04T19:08:11.195722
