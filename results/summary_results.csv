@@ -1,0 +1,17 @@
+model_type,wine_type,accuracy,precision,recall,f1
+Random Forest,red,0.7583,0.7622,0.7583,0.7566
+KNN,red,0.7062,0.7132,0.7062,0.7082
+SVM,red,0.6812,0.6826,0.6812,0.6814
+AdaBoost,red,0.6646,0.681,0.6646,0.6543
+Decision Tree,red,0.65,0.6508,0.65,0.6503
+Logistic Regression,red,0.6479,0.6406,0.6479,0.6331
+Baseline Model,red,0.4646,0.2158,0.4646,0.2947
+Stratified Baseline Model,red,0.3583,0.3638,0.3583,0.3609
+Random Forest,white,0.7034,0.712,0.7034,0.7031
+KNN,white,0.6878,0.6904,0.6878,0.6878
+Decision Tree,white,0.6293,0.6296,0.6293,0.6293
+SVM,white,0.6265,0.6335,0.6265,0.625
+AdaBoost,white,0.5721,0.5741,0.5721,0.5721
+Logistic Regression,white,0.5626,0.5755,0.5626,0.5553
+Baseline Model,white,0.449,0.2016,0.449,0.2782
+Stratified Baseline Model,white,0.3667,0.3683,0.3667,0.3674
